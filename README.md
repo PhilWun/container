@@ -17,6 +17,10 @@ The OpenTOSCA Container is java/maven based runtime for deploying and managing T
 
 ## Build
 
+⚠️ You need to authenticate with GitHub to build it, because some packages are hosted on GitHub Packages.
+[Here](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry#authenticating-with-a-personal-access-token) you can see how to do it.
+As repository URL use: https://maven.pkg.github.com/OpenTOSCA/winery
+
 1.  Run `git update-index --assume-unchanged ./org.opentosca.container.core/src/main/resources/application.properties` to ignore custom configuration changes inside the application.properties.
 2.  Update [application.properties](org.opentosca.container.core/src/main/resources/application.properties) and replace `localhost` with your external IP address, e.g., `192.168.1.100`.
 3.  Run `mvn package -DskipTests` inside the root folder to build without tests (See also Tests in the next section).
